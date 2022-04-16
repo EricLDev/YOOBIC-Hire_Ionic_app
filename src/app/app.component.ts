@@ -9,7 +9,7 @@ export class AppComponent {
     { title: 'Dashboard', url: '/folder/Dashboard', icon: 'apps' },
     { title: 'Photos', url: '/folder/Photos', icon: 'image' },
     { title: 'Actors', url: '/folder/Actors', icon: 'people' },
-    { title: 'Films', url: '/folder/Film', icon: 'film' },
+    { title: 'Films', url: '/folder/Films', icon: 'film' },
     { title: 'Starships', url: '/folder/Starships', icon: 'rocket' },
     { title: 'Chat', url: '/folder/Chat', icon: 'chatbox' },
   ];

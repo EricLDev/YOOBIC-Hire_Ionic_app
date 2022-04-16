@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div id="container">
+    <form>
+      <ion-item lines="full">
+        <ion-icon slot="start" ios="mail-outline" md="mail-sharp"></ion-icon>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-icon
+          slot="start"
+          ios="lock-closed-outline"
+          md="lock-closed-sharp"
+        ></ion-icon>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" required></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button
+            type="submit"
+            color="danger"
+            expand="block"
+            routerLink="../folder/Actors"
+            >Sign In</ion-button
+          >
+          <a [routerLink]="['../folder/Actors']" class="small-text"
+            >Forgot Password?</a
+          >
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="socials">
+          Or sign in with
+          <div class="socials">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-github"></ion-icon>
+            <ion-icon name="logo-google"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>
