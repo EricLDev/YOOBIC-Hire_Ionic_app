@@ -8,8 +8,7 @@ ul {
   list-style-type: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
+  grid-template-columns: 1fr;
 
   ion-img::part(image) {
     width: auto;
@@ -37,5 +36,17 @@ ul {
     display: flex;
     justify-content: center;
     padding: 1rem 0;
+  }
+
+  ion-item ion-label span {
+    font-style: italic;
+    color: var(--ion-color-primary);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0.5rem 1rem;
   }
 }

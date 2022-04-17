@@ -11,6 +11,11 @@
   form {
     width: 80%;
 
+    ion-img::part(image) {
+      margin-bottom: 1rem;
+      border-radius: 50%;
+    }
+
     ion-button {
       margin: 2rem 0;
     }

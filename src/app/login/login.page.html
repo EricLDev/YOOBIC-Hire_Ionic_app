@@ -9,6 +9,8 @@
 <ion-content>
   <div id="container">
     <form>
+      <ion-img src="../assets/StarWars.jpg"></ion-img>
+
       <ion-item lines="full">
         <ion-icon slot="start" ios="mail-outline" md="mail-sharp"></ion-icon>
         <ion-label position="floating">E-mail</ion-label>
@@ -27,9 +29,8 @@
         <ion-col>
           <ion-button
             type="submit"
-            color="danger"
             expand="block"
-            routerLink="../actors-list/"
+            routerLink="../folder/actors-list/"
             >Sign In</ion-button
           >
           <a [routerLink]="['../login']" class="small-text">Forgot Password?</a>
