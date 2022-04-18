@@ -16,6 +16,7 @@
 
   <div id="container">
     <div [ngSwitch]="folder">
+      <app-login *ngSwitchCase="login"></app-login>
       <app-actors-list *ngSwitchCase="'actors-list'"></app-actors-list>
     </div>
   </div>

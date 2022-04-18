@@ -8,24 +8,73 @@
       <ion-img [src]="actor.image" slot="start"></ion-img>
     </ion-card-content>
 
-    <ion-item>
-      <ion-icon name="accessibility-outline" slot="start"></ion-icon>
-      <ion-label><span>Height:</span> {{actor.height}}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="barbell-outline" slot="start"></ion-icon>
-      <ion-label><span>Mass:</span> {{actor.mass}}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="transgender-outline" slot="start"></ion-icon>
-      <ion-label><span>Gender:</span> {{actor.gender}}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="planet-outline" slot="start"></ion-icon>
-      <ion-label><span>Homeworld:</span> {{actor.homeworld}}</ion-label>
-    </ion-item>
+    <div class="stats">
+      <ion-item>
+        <ion-icon name="accessibility-outline" slot="start"></ion-icon>
+        <ion-label><span>Height:</span> {{actor.height}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="barbell-outline" slot="start"></ion-icon>
+        <ion-label><span>Mass:</span> {{actor.mass}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="transgender-outline" slot="start"></ion-icon>
+        <ion-label><span>Gender:</span> {{actor.gender}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="planet-outline" slot="start"></ion-icon>
+        <ion-label><span>Homeworld:</span> {{actor.homeworld}}</ion-label>
+      </ion-item>
 
-    <div id="moreDetails">
+      <ion-item>
+        <ion-icon name="globe-outline" slot="start"></ion-icon>
+        <ion-label
+          ><span>Wiki:</span
+          ><a href="{{actor.wiki}}"> {{actor.name}}</a></ion-label
+        >
+      </ion-item>
+      <ion-item>
+        <ion-icon name="egg-outline" slot="start"></ion-icon>
+        <ion-label><span>Born:</span> {{actor.born}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="location-outline" slot="start"></ion-icon>
+        <ion-label
+          ><span>Born Location:</span> {{actor.bornLocation}}</ion-label
+        >
+      </ion-item>
+      <ion-item>
+        <ion-icon name="skull-outline" slot="start"></ion-icon>
+        <ion-label><span>Died:</span> {{actor.died}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="location-outline" slot="start"></ion-icon>
+        <ion-label
+          ><span>Died Location:</span> {{actor.diedLocation}}</ion-label
+        >
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-label><span>Species:</span> {{actor.species}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="color-palette-outline" slot="start"></ion-icon>
+        <ion-label><span>HairColor:</span> {{actor.hairColor}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="color-palette-outline" slot="start"></ion-icon>
+        <ion-label><span>EyeColor:</span> {{actor.eyeColor}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="color-palette-outline" slot="start"></ion-icon>
+        <ion-label><span>SkinColor:</span> {{actor.skinColor}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="hardware-chip-outline" slot="start"></ion-icon>
+        <ion-label><span>Cybernetics:</span> {{actor.cybernetics}}</ion-label>
+      </ion-item>
+    </div>
+    <div id="backToList">
       <ion-button fill="outline"
         ><a href="../folder/actors-list">Back to actors' list</a></ion-button
       >
