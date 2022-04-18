@@ -8,6 +8,7 @@ import { FolderPageRoutingModule } from './folder-routing.module';
 
 import { FolderPage } from './folder.page';
 import { ActorsListPageModule } from '../actors-list/actors-list.module';
+import { ActorDetailPageModule } from '../actor-detail/actor-detail.module';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { ActorsListPageModule } from '../actors-list/actors-list.module';
     IonicModule,
     FolderPageRoutingModule,
     ActorsListPageModule,
+    ActorDetailPageModule,
   ],
   declarations: [FolderPage],
 })

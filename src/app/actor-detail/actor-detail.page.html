@@ -1,0 +1,34 @@
+<ion-content [fullscreen]="true">
+  <ion-card *ngIf="actor">
+    <ion-card-header>
+      <ion-card-title>{{actor.name}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-img [src]="actor.image" slot="start"></ion-img>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name="accessibility-outline" slot="start"></ion-icon>
+      <ion-label><span>Height:</span> {{actor.height}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="barbell-outline" slot="start"></ion-icon>
+      <ion-label><span>Mass:</span> {{actor.mass}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="transgender-outline" slot="start"></ion-icon>
+      <ion-label><span>Gender:</span> {{actor.gender}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="planet-outline" slot="start"></ion-icon>
+      <ion-label><span>Homeworld:</span> {{actor.homeworld}}</ion-label>
+    </ion-item>
+
+    <div id="moreDetails">
+      <ion-button fill="outline"
+        ><a href="../folder/actors-list">Back to actors' list</a></ion-button
+      >
+    </div>
+  </ion-card>
+</ion-content>

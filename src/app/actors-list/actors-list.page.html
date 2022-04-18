@@ -6,35 +6,37 @@
 
 <ion-content [fullscreen]="true">
   <ul>
-    <li *ngFor="let a of actors">
+    <li *ngFor="let actor of actors">
       <ion-card>
         <ion-card-header>
-          <ion-card-title>{{a.name}}</ion-card-title>
+          <ion-card-title>{{actor.name}}</ion-card-title>
         </ion-card-header>
 
         <ion-card-content>
-          <ion-img [src]="a.image" slot="start"></ion-img>
+          <ion-img [src]="actor.image" slot="start"></ion-img>
         </ion-card-content>
 
         <ion-item>
           <ion-icon name="accessibility-outline" slot="start"></ion-icon>
-          <ion-label><span>Height:</span> {{a.height}}</ion-label>
+          <ion-label><span>Height:</span> {{actor.height}}</ion-label>
         </ion-item>
         <ion-item>
           <ion-icon name="barbell-outline" slot="start"></ion-icon>
-          <ion-label><span>Mass:</span> {{a.mass}}</ion-label>
+          <ion-label><span>Mass:</span> {{actor.mass}}</ion-label>
         </ion-item>
         <ion-item>
           <ion-icon name="transgender-outline" slot="start"></ion-icon>
-          <ion-label><span>Gender:</span> {{a.gender}}</ion-label>
+          <ion-label><span>Gender:</span> {{actor.gender}}</ion-label>
         </ion-item>
         <ion-item>
           <ion-icon name="planet-outline" slot="start"></ion-icon>
-          <ion-label><span>Homeworld:</span> {{a.homeworld}}</ion-label>
+          <ion-label><span>Homeworld:</span> {{actor.homeworld}}</ion-label>
         </ion-item>
 
         <div id="moreDetails">
-          <ion-button fill="outline">More details...</ion-button>
+          <ion-button fill="outline" (click)="onSelectActor(actor)"
+            >More details...</ion-button
+          >
         </div>
       </ion-card>
     </li>

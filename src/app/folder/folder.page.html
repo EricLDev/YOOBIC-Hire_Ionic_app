@@ -16,7 +16,11 @@
 
   <div id="container">
     <div [ngSwitch]="folder">
-      <app-actors-list *ngSwitchCase="'actors-list'"></app-actors-list>
+      <app-actors-list
+        *ngSwitchCase="'actors-list'"
+        (newActorDetail)="setActor($event)"
+      ></app-actors-list>
+      <app-actor-detail *ngIf="actor" [actor]="actor"></app-actor-detail>
     </div>
   </div>
 </ion-content>
