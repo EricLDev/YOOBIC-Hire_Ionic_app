@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 export class Actor {
@@ -29,7 +29,6 @@ export class Actor {
   styleUrls: ['./actors-list.page.scss'],
 })
 export class ActorsListPage implements OnInit {
-  @Output() newActorDetail = new EventEmitter<object>();
   actors: Actor[];
   selectedActor?: Actor;
 
@@ -47,9 +46,5 @@ export class ActorsListPage implements OnInit {
 
         this.actors = response.slice(0, 18);
       });
-  }
-
-  onSelectActor(actor: Actor) {
-    this.newActorDetail.emit(actor);
   }
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Actor } from '../actors-list/actors-list.page';
 
 @Component({
@@ -7,8 +9,26 @@ import { Actor } from '../actors-list/actors-list.page';
   styleUrls: ['./actor-detail.page.scss'],
 })
 export class ActorDetailPage implements OnInit {
-  @Input() actor?: Actor;
-  constructor() {}
+  actor?: Actor;
+  public actorId: string;
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private http: HttpClient
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.actorId = this.activatedRoute.snapshot.paramMap.get('actorId');
+    this.getActor(this.actorId);
+    console.log(this.actorId);
+  }
+
+  getActor(actorId) {
+    this.http
+      .get<any>(`https://akabab.github.io/starwars-api/api/id/${actorId}.json`)
+      .subscribe((response) => {
+        console.log(response);
+
+        this.actor = response;
+      });
+  }
 }

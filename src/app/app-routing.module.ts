@@ -19,11 +19,17 @@ const routes: Routes = [
   },
   {
     path: 'actors-list',
-    loadChildren: () => import('./actors-list/actors-list.module').then( m => m.ActorsListPageModule)
+    loadChildren: () =>
+      import('./actors-list/actors-list.module').then(
+        (m) => m.ActorsListPageModule
+      ),
   },
   {
-    path: 'actor-detail',
-    loadChildren: () => import('./actor-detail/actor-detail.module').then( m => m.ActorDetailPageModule)
+    path: 'folder/actor-detail/:actorId',
+    loadChildren: () =>
+      import('./actor-detail/actor-detail.module').then(
+        (m) => m.ActorDetailPageModule
+      ),
   },
 ];
 
