@@ -3,7 +3,7 @@
     <ion-menu
       *ngIf="currentRoute !== '/login'"
       contentId="main-content"
-      type="overlay"
+      type="reveal"
     >
       <ion-content>
         <ion-list id="inbox-list">
@@ -38,5 +38,6 @@
         </div>
       </ion-content>
     </ion-menu>
-    <ion-router-outlet id="main-content"></ion-router-outlet> </ion-split-pane
-></ion-app>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

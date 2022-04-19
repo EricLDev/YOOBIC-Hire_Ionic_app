@@ -12,6 +12,18 @@ ion-title {
   text-transform: capitalize;
 }
 
+#container {
+  min-height: 100%;
+  position: relative;
+
+  .comingSoon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+  }
+}
+
 #container strong {
   font-size: 20px;
   line-height: 26px;
