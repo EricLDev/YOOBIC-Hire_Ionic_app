@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { filter } from 'rxjs/operators';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -13,6 +16,15 @@ export class AppComponent {
     { title: 'Starships', url: '/folder/Starships', icon: 'rocket' },
     { title: 'Chat', url: '/folder/Chat', icon: 'chatbox' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel'];
-  constructor() {}
+
+  currentRoute: string;
+  constructor(private router: Router) {
+    console.log(router.url);
+    router.events
+      .pipe(filter((event: any) => event instanceof NavigationEnd))
+      .subscribe((event) => {
+        this.currentRoute = event.urlAfterRedirects;
+        console.log(event);
+      });
+  }
 }

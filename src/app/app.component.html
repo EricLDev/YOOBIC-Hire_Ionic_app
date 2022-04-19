@@ -1,6 +1,10 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu
+      *ngIf="currentRoute !== '/login'"
+      contentId="main-content"
+      type="overlay"
+    >
       <ion-content>
         <ion-list id="inbox-list">
           <ion-img src="../assets/StarWars.jpg"></ion-img>
@@ -28,7 +32,7 @@
           </ion-menu-toggle>
         </ion-list>
         <div id="logout">
-          <a href="/">
+          <a href="/login">
             <ion-icon name="power-outline"></ion-icon>
           </a>
         </div>

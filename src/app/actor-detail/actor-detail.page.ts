@@ -19,15 +19,12 @@ export class ActorDetailPage implements OnInit {
   ngOnInit() {
     this.actorId = this.activatedRoute.snapshot.paramMap.get('actorId');
     this.getActor(this.actorId);
-    console.log(this.actorId);
   }
 
   getActor(actorId) {
     this.http
       .get<any>(`https://akabab.github.io/starwars-api/api/id/${actorId}.json`)
       .subscribe((response) => {
-        console.log(response);
-
         this.actor = response;
       });
   }

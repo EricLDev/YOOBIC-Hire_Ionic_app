@@ -1,0 +1,96 @@
+ion-card {
+  width: 95%;
+  margin: auto auto;
+}
+
+ion-card-title {
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+ion-card ion-img::part(image) {
+  width: auto;
+  height: 400px;
+  margin: 0.5rem 0;
+  border-radius: 0.25rem;
+}
+
+ion-card ion-item::part(native) {
+  padding: 0 0.5rem;
+}
+
+ion-card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+ion-card-title {
+  text-align: center;
+  font-size: 2.1rem;
+}
+
+ion-card #backToList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 0;
+}
+
+ion-card #backToList a {
+  text-decoration: none;
+}
+
+ion-card ion-item ion-label span {
+  font-style: italic;
+  color: var(--ion-color-primary);
+}
+
+@media screen and (min-width: 768px) {
+  ion-card {
+    margin-top: 0.75rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  ion-card-title {
+    font-size: 3rem;
+  }
+  ion-card-header {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  ion-card ion-img::part(image) {
+    height: 650px;
+    padding: 1rem;
+    border-radius: 1.25rem;
+  }
+  ion-card .stats {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  ion-card #backToList {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}

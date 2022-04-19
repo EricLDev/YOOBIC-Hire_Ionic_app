@@ -12,7 +12,12 @@
   form {
     width: 80%;
 
+    ion-img {
+      display: flex;
+      justify-content: center;
+    }
     ion-img::part(image) {
+      width: 80%;
       margin-bottom: 1rem;
       border-radius: 50%;
     }

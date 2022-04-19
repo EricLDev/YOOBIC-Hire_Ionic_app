@@ -62,6 +62,7 @@ ion-card {
     ion-img::part(image) {
       height: 650px;
       padding: 1rem;
+      border-radius: 1.25rem;
     }
 
     .stats {
