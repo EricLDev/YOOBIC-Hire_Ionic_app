@@ -42,8 +42,6 @@ export class ActorsListPage implements OnInit {
     this.http
       .get<any[]>('https://akabab.github.io/starwars-api/api/all.json')
       .subscribe((response) => {
-        console.log(response);
-
         this.actors = response.slice(0, 18);
       });
   }

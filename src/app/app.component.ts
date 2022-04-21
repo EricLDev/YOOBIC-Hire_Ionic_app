@@ -19,12 +19,10 @@ export class AppComponent {
 
   currentRoute: string;
   constructor(private router: Router) {
-    console.log(router.url);
     router.events
       .pipe(filter((event: any) => event instanceof NavigationEnd))
       .subscribe((event) => {
         this.currentRoute = event.urlAfterRedirects;
-        console.log(event);
       });
   }
 }
