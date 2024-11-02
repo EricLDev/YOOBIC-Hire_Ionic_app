@@ -1,4 +1,4 @@
-## Live Site URL: https://ericl81.github.io/YOOBIC-Hire_Ionic_app/
+## Live Site URL: https://ericldev.github.io/YOOBIC-Hire_Ionic_app/
 
 # YOOBIC London Dev Hiring Project
 
